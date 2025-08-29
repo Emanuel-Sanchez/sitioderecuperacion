@@ -1,0 +1,241 @@
+/* Estilos generales del body */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    /* Estilos para la imagen de fondo */
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5f491d29e58aa67d42cfa5cf/7986ef10-1857-4179-bf19-b2e9974dd4ea/hector-emilio-gonzalez-SiJ2RufQTbo-unsplash(1).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center; /* Centra la imagen en la parte superior del cuerpo */
+}
+
+/* Estilos para el encabezado (header) */
+header {
+    background-color: rgba(10, 50, 90, 0.7); /* Azul semitransparente */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+header .logo-container img {
+    height: 80px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Estilos para la barra de navegación (nav) */
+nav {
+    background-color: #001f3f; /* Azul marino */
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el contenedor del logo dentro del nav */
+nav .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+nav .logo-container img {
+    height: auto;
+    max-height: 150px;
+    width: auto;
+    display: block;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+nav h2 {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #ADD8E6; /* Azul claro */
+    transition: background-color 0.3s ease;
+    border: 1px solid #77BBDD;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+nav ul li a:hover {
+    background-color: #87CEEB;
+}
+
+/* Estilos para el contenedor principal del contenido */
+main {
+    padding: 20px;
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+    min-height: calc(100vh - 60px);
+}
+
+/* Estilos para las secciones dentro de main */
+main > section {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+main > section:last-child {
+    margin-bottom: 40px;
+}
+
+/* Estilos para los títulos dentro de main */
+main h1,
+main h2,
+main h3 {
+    color: #001f3f; /* Azul marino para los títulos */
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilos para los párrafos dentro de main */
+main p {
+    line-height: 1.6;
+    text-align: justify;
+    color: #000;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    background-color: #001f3f;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+/* Estilos para las imágenes */
+.imagen-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.imagen-container img {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid #77BBDD;
+    box-sizing: border-box;
+}
+
+/* Estilos para el marquee */
+marquee {
+    background-color: #ADD8E6;
+    color: #001f3f;
+    padding: 8px;
+    margin-bottom: 20px;
+    font-style: italic;
+    border: 1px dashed #001f3f;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav {
+        width: 100%;
+        min-height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        flex-wrap: wrap;
+        position: static;
+    }
+
+    nav .logo-container {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+        padding-top: 0;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+
+    main {
+        align-items: stretch;
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    main > section {
+        width: 95%;
+    }
+}
